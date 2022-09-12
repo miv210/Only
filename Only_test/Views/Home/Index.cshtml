@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<Only_test.Models.User>
+
+<div class="text-center">
+    <h2 class="display-4">Список полльзователей</h2>
+    <form method="get">
+        <div>
+            <p>Выбирите отдел</p>
+            <select asp-items=""></select>
+            <input type="submit" value="отфилтровать"/>
+         </div>
+    </form>
+
+   <table>
+       <tr><th>ФИО</th> <th>Должность </th> <th>Отдел</th> <th>Родительский отдел</th> </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.FullName</td>
+                <td>@item.Position</td>
+                <td>@item.Department</td>
+                <td>@item.ParentDepartment</td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Only_test.Models.User>
+
+@{
+    ViewData["Title"] = "Import";
+}
+
+<h1>Index import</h1>
+<form asp-action="AddFile" asp-controller="ImportUsers" method="post" enctype="multipart/form-data">
+    <div>
+        <h3>Загрузите фаил</h3>
+        <input type="file" name="uploadedFile"/>
+        <input type="submit"  value="Загрузить"/>
+    </div>
+</form>
+    
+
+
+
+
+
+
